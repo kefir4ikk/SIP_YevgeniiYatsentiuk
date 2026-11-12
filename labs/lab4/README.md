@@ -77,20 +77,6 @@ lab04/
 - NumPy, SciPy (`scipy.signal`), Matplotlib
 - Jupyter Notebook
 
-## Запуск
-
-```bash
-# Створення та активація віртуального середовища
-python -m venv venv
-
-# Linux / macOS
-source venv/bin/activate
-# Windows (PowerShell)
-# venv\Scripts\Activate.ps1
-
-# Встановлення залежностей
-pip install -r requirements.txt
-
 # Запуск ноутбука
 jupyter notebook lab_4_Yatsentiuk.ipynb
 ```
