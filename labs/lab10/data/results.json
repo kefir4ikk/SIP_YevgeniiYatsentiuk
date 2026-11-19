@@ -1,0 +1,505 @@
+{
+ "variant": 2,
+ "params": {
+  "shape": "MORPH_RECT",
+  "size": 5,
+  "n_iter": 1,
+  "pipeline": "Closing -> Black-Hat"
+ },
+ "structuring_elements": {
+  "rect": 25,
+  "cross": 9,
+  "ellipse": 17
+ },
+ "binary": {
+  "area": {
+   "raw": 28058,
+   "eroded": 15648,
+   "dilated": 42074,
+   "opened": 27644,
+   "closed": 29042,
+   "pipeline": 28694,
+   "clean": 28060
+  },
+  "iou_with_clean": {
+   "raw": 0.9757076468103084,
+   "opened": 0.9851746258018532,
+   "closed": 0.955012325390304,
+   "pipeline": 0.9662555432372506
+  },
+  "iou_without_pitch_zone": {
+   "raw": 0.9742498880429915,
+   "opened": 0.9842734008770604,
+   "closed": 0.9809673085535154,
+   "pipeline": 0.993573264781491
+  },
+  "components": {
+   "clean": 7,
+   "raw": 54,
+   "opened": 17,
+   "closed": 47,
+   "pipeline": 8
+  },
+  "gradient_band_px": 4,
+  "gradient_band_3x3_px": 2
+ },
+ "blackhat": {
+  "thresholds": {
+   "fixed": 30,
+   "otsu": 39.0,
+   "calibrated": 17,
+   "percentile_naive": 98,
+   "percentile_outside_pitch": 16.0
+  },
+  "golden_max": 102,
+  "bh_of_closed_max": 0,
+  "methods": {
+   "Фіксований T = 30": {
+    "n_full": 7,
+    "n_partial": 3,
+    "fa_noise": 0,
+    "fa_pitch": 1,
+    "px_precision": 1.0,
+    "px_recall": 0.5635838150289018,
+    "n_pixels": 1022
+   },
+   "Оцу (T = 39)": {
+    "n_full": 7,
+    "n_partial": 2,
+    "fa_noise": 0,
+    "fa_pitch": 1,
+    "px_precision": 1.0,
+    "px_recall": 0.476878612716763,
+    "n_pixels": 970
+   },
+   "Золота плата (T = 17)": {
+    "n_full": 7,
+    "n_partial": 3,
+    "fa_noise": 0,
+    "fa_pitch": 1,
+    "px_precision": 0.9695652173913043,
+    "px_recall": 0.6445086705202312,
+    "n_pixels": 1112
+   }
+  }
+ },
+ "se_study": {
+  "RECT 3x3": {
+   "T": 16,
+   "status": [
+    "+",
+    "~",
+    "~",
+    "-",
+    "~",
+    "+",
+    "-",
+    "+",
+    "+",
+    "~",
+    "-"
+   ],
+   "stats": {
+    "n_full": 4,
+    "n_partial": 4,
+    "fa_noise": 0,
+    "fa_pitch": 1,
+    "px_precision": 0.9361702127659575,
+    "px_recall": 0.2543352601156069,
+    "n_pixels": 498
+   },
+   "T_diff": 15,
+   "status_diff": [
+    "+",
+    "~",
+    "~",
+    "-",
+    "~",
+    "+",
+    "-",
+    "+",
+    "+",
+    "~",
+    "-"
+   ],
+   "stats_diff": {
+    "n_full": 4,
+    "n_partial": 4,
+    "fa_noise": 0,
+    "fa_pitch": 0,
+    "px_precision": 0.9157894736842105,
+    "px_recall": 0.2514450867052023,
+    "n_pixels": 99
+   },
+   "structural_px": 0
+  },
+  "RECT 5x5 (варіант 2)": {
+   "T": 17,
+   "status": [
+    "+",
+    "+",
+    "+",
+    "~",
+    "+",
+    "+",
+    "-",
+    "+",
+    "+",
+    "~",
+    "~"
+   ],
+   "stats": {
+    "n_full": 7,
+    "n_partial": 3,
+    "fa_noise": 0,
+    "fa_pitch": 1,
+    "px_precision": 0.9695652173913043,
+    "px_recall": 0.6445086705202312,
+    "n_pixels": 1112
+   },
+   "T_diff": 16,
+   "status_diff": [
+    "+",
+    "+",
+    "+",
+    "~",
+    "+",
+    "+",
+    "-",
+    "+",
+    "+",
+    "~",
+    "~"
+   ],
+   "stats_diff": {
+    "n_full": 7,
+    "n_partial": 3,
+    "fa_noise": 0,
+    "fa_pitch": 0,
+    "px_precision": 0.9867256637168141,
+    "px_recall": 0.6445086705202312,
+    "n_pixels": 300
+   },
+   "structural_px": 0
+  },
+  "RECT 7x7": {
+   "T": 18,
+   "status": [
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "~",
+    "+",
+    "+",
+    "~",
+    "~"
+   ],
+   "stats": {
+    "n_full": 8,
+    "n_partial": 3,
+    "fa_noise": 0,
+    "fa_pitch": 1,
+    "px_precision": 0.4253521126760563,
+    "px_recall": 0.8728323699421965,
+    "n_pixels": 1663
+   },
+   "T_diff": 16,
+   "status_diff": [
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "~",
+    "+",
+    "+",
+    "~",
+    "~"
+   ],
+   "stats_diff": {
+    "n_full": 8,
+    "n_partial": 3,
+    "fa_noise": 0,
+    "fa_pitch": 0,
+    "px_precision": 0.9837133550488599,
+    "px_recall": 0.8728323699421965,
+    "n_pixels": 448
+   },
+   "structural_px": 0
+  },
+  "CROSS 5x5": {
+   "T": 76,
+   "status": [
+    "~",
+    "-",
+    "-",
+    "-",
+    "-",
+    "-",
+    "-",
+    "-",
+    "-",
+    "-",
+    "-"
+   ],
+   "stats": {
+    "n_full": 0,
+    "n_partial": 1,
+    "fa_noise": 0,
+    "fa_pitch": 4,
+    "px_precision": 0.5789473684210527,
+    "px_recall": 0.06358381502890173,
+    "n_pixels": 404
+   },
+   "T_diff": 14,
+   "status_diff": [
+    "~",
+    "~",
+    "~",
+    "~",
+    "~",
+    "+",
+    "-",
+    "~",
+    "+",
+    "~",
+    "-"
+   ],
+   "stats_diff": {
+    "n_full": 2,
+    "n_partial": 7,
+    "fa_noise": 0,
+    "fa_pitch": 0,
+    "px_precision": 0.9629629629629629,
+    "px_recall": 0.37572254335260113,
+    "n_pixels": 168
+   },
+   "structural_px": 251
+  },
+  "ELLIPSE 5x5": {
+   "T": 55,
+   "status": [
+    "+",
+    "+",
+    "~",
+    "-",
+    "~",
+    "+",
+    "-",
+    "~",
+    "-",
+    "~",
+    "-"
+   ],
+   "stats": {
+    "n_full": 3,
+    "n_partial": 4,
+    "fa_noise": 0,
+    "fa_pitch": 1,
+    "px_precision": 0.9245283018867925,
+    "px_recall": 0.2832369942196532,
+    "n_pixels": 750
+   },
+   "T_diff": 15,
+   "status_diff": [
+    "+",
+    "+",
+    "+",
+    "~",
+    "+",
+    "+",
+    "-",
+    "+",
+    "+",
+    "+",
+    "~"
+   ],
+   "stats_diff": {
+    "n_full": 8,
+    "n_partial": 2,
+    "fa_noise": 0,
+    "fa_pitch": 0,
+    "px_precision": 0.975,
+    "px_recall": 0.5635838150289018,
+    "n_pixels": 237
+   },
+   "structural_px": 124
+  },
+  "RECT 5x5, N = 2": {
+   "T": 18,
+   "status": [
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "~",
+    "~"
+   ],
+   "stats": {
+    "n_full": 9,
+    "n_partial": 2,
+    "fa_noise": 1,
+    "fa_pitch": 1,
+    "px_precision": 0.4343163538873995,
+    "px_recall": 0.9364161849710982,
+    "n_pixels": 1736
+   },
+   "T_diff": 16,
+   "status_diff": [
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "+",
+    "~",
+    "~"
+   ],
+   "stats_diff": {
+    "n_full": 9,
+    "n_partial": 2,
+    "fa_noise": 0,
+    "fa_pitch": 0,
+    "px_precision": 0.972972972972973,
+    "px_recall": 0.9364161849710982,
+    "n_pixels": 513
+   },
+   "structural_px": 0
+  }
+ },
+ "defects": [
+  {
+   "id": "D1",
+   "kind": "break",
+   "size": 2,
+   "area_px": 20,
+   "mean_bh": 84.85,
+   "overlap_calibrated": 1.0,
+   "status_fixed": "+",
+   "status_otsu": "+",
+   "status_calibrated": "+"
+  },
+  {
+   "id": "D2",
+   "kind": "break",
+   "size": 3,
+   "area_px": 30,
+   "mean_bh": 74.56666666666666,
+   "overlap_calibrated": 1.0,
+   "status_fixed": "+",
+   "status_otsu": "+",
+   "status_calibrated": "+"
+  },
+  {
+   "id": "D3",
+   "kind": "break",
+   "size": 4,
+   "area_px": 40,
+   "mean_bh": 67.45,
+   "overlap_calibrated": 1.0,
+   "status_fixed": "+",
+   "status_otsu": "+",
+   "status_calibrated": "+"
+  },
+  {
+   "id": "D4",
+   "kind": "break",
+   "size": 6,
+   "area_px": 60,
+   "mean_bh": 20.3,
+   "overlap_calibrated": 0.65,
+   "status_fixed": "~",
+   "status_otsu": "-",
+   "status_calibrated": "~"
+  },
+  {
+   "id": "D5",
+   "kind": "notch",
+   "size": "4x3",
+   "area_px": 12,
+   "mean_bh": 62.833333333333336,
+   "overlap_calibrated": 1.0,
+   "status_fixed": "+",
+   "status_otsu": "+",
+   "status_calibrated": "+"
+  },
+  {
+   "id": "D6",
+   "kind": "pinhole",
+   "size": "~3",
+   "area_px": 5,
+   "mean_bh": 72.8,
+   "overlap_calibrated": 1.0,
+   "status_fixed": "+",
+   "status_otsu": "+",
+   "status_calibrated": "+"
+  },
+  {
+   "id": "D7",
+   "kind": "break",
+   "size": 8,
+   "area_px": 80,
+   "mean_bh": 3.35,
+   "overlap_calibrated": 0.0,
+   "status_fixed": "-",
+   "status_otsu": "-",
+   "status_calibrated": "-"
+  },
+  {
+   "id": "D8",
+   "kind": "break",
+   "size": 1,
+   "area_px": 10,
+   "mean_bh": 63.3,
+   "overlap_calibrated": 1.0,
+   "status_fixed": "+",
+   "status_otsu": "+",
+   "status_calibrated": "+"
+  },
+  {
+   "id": "D9",
+   "kind": "pinhole",
+   "size": "~3",
+   "area_px": 5,
+   "mean_bh": 66.0,
+   "overlap_calibrated": 1.0,
+   "status_fixed": "+",
+   "status_otsu": "+",
+   "status_calibrated": "+"
+  },
+  {
+   "id": "D10",
+   "kind": "diag_break",
+   "size": 3,
+   "area_px": 32,
+   "mean_bh": 55.21875,
+   "overlap_calibrated": 0.78125,
+   "status_fixed": "~",
+   "status_otsu": "~",
+   "status_calibrated": "~"
+  },
+  {
+   "id": "D11",
+   "kind": "diag_break",
+   "size": 5,
+   "area_px": 52,
+   "mean_bh": 37.57692307692308,
+   "overlap_calibrated": 0.7115384615384616,
+   "status_fixed": "~",
+   "status_otsu": "~",
+   "status_calibrated": "~"
+  }
+ ]
+}

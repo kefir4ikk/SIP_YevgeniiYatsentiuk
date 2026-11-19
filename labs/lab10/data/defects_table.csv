@@ -1,0 +1,12 @@
+id,kind,size,area_px,mean_bh,overlap_calibrated,status_fixed,status_otsu,status_calibrated
+D1,break,2,20,84.85,1.0,+,+,+
+D2,break,3,30,74.56666666666666,1.0,+,+,+
+D3,break,4,40,67.45,1.0,+,+,+
+D4,break,6,60,20.3,0.65,~,-,~
+D5,notch,4x3,12,62.833333333333336,1.0,+,+,+
+D6,pinhole,~3,5,72.8,1.0,+,+,+
+D7,break,8,80,3.35,0.0,-,-,-
+D8,break,1,10,63.3,1.0,+,+,+
+D9,pinhole,~3,5,66.0,1.0,+,+,+
+D10,diag_break,3,32,55.21875,0.78125,~,~,~
+D11,diag_break,5,52,37.57692307692308,0.7115384615384616,~,~,~
